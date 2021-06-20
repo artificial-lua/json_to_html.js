@@ -32,6 +32,7 @@ inner에 json이나 array가 올 수 있음. json일 경우 재귀 호출하며,
 {
     "name" : "test",
     "error" : false,
+    "descript" : "테스트용 파일",
     "data" : {
         "tag" : "ul",
         "id" : "list",
@@ -78,6 +79,9 @@ inner에 json이나 array가 올 수 있음. json일 경우 재귀 호출하며,
 
 ## error
 해당 호출의 error 여부를 나타냅니다. 동적으로 json string을 생성할 때 이를 상정하여 작성하도록 합니다. 서버에서 오류가 일어나면 error값을 true로 전달해줍시다.
+
+## descript
+해당 json에 대한 설명을 적는 필드
 
 ## data
 error가 false일 때 파싱의 직접 대상이 되는 데이터 필드입니다. make_document()에는 data필드부터 들어가게 됩니다.
