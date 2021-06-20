@@ -22,23 +22,23 @@ inner에 json이나 array가 올 수 있음. json일 경우 재귀 호출하며,
 # json string의 형식
 ```json
 {
-    "name" : "name", //해당 json의 명칭이 들어오게 됩니다.
-    "error" : false, //error의 여부를 나타냅니다. true일 경우 에러가 있다는 뜻입니다.
+    "name" : "name",
+    "error" : false,
     "data" : {
-        "tag" : "ul", // 태그 명
-        "id" : "list", // 태그 id
-        "inner" : [{ // 내부에 다시 태그를 넣을 수 있습니다. 이 경우는 배열로 여러개를 넣을 수 있습니다.
+        "tag" : "ul",
+        "id" : "list",
+        "inner" : [{
             "tag" : "li",
             "inner" : {
                 "tag" : "a",
-                "href" : "https://google.com", // href와 같은 속성도 줄 수 있습니다.
+                "href" : "https://google.com",
                 "inner" : "1"}
         },
         {
             "tag" : "li",
             "inner" : {
                 "tag" : "a",
-                "href" : "javascript:;", // javascript 호출을 목표로 한 a태그 생성도 가능합니다.
+                "href" : "javascript:;",
                 "inner" : "2"
             }
         },
