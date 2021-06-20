@@ -8,7 +8,7 @@ function print(a){
 
 function parsing(string, id){
     return_json = JSON.parse(string)
-    print(return_json.descript)
+    print("descript" + return_json.descript)
     if(return_json.error == false){
         print("Not Error")
         document.getElementById(id).innerHTML = ""
