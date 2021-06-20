@@ -6,6 +6,28 @@ function print(a){
     }
 }
 
+function parsing(return_json, id){
+    if(return_json.error == false){
+        print("Not Error")
+        document.getElementById(id).innerHTML = ""
+        if(Array.isArray(return_json.data)){
+            for(var i = 0; i < Object.keys(return_json.data).length; i++)
+            {
+                document.getElementById(id).appendChild(make_document(return_json.data[i]))
+            }
+        }
+        else{
+            document.getElementById(id).appendChild(make_document(return_json.data))
+        }
+    }
+    else if(return_json.error == true){
+        print("Has Error!")
+    }
+    else {
+        print('알려지지 않은 오류!')
+    }
+}
+
 // REST API 실행하는 내용
 function rest(url, id){
 
@@ -19,25 +41,7 @@ function rest(url, id){
             print(xhr.responseText)
             return_json = JSON.parse(xhr.responseText)
             print(return_json)
-            if(return_json.error == false){
-                print("Not Error")
-                document.getElementById(id).innerHTML = ""
-                if(Array.isArray(return_json.data)){
-                    for(var i = 0; i < Object.keys(return_json.data).length; i++)
-                    {
-                        document.getElementById(id).appendChild(make_document(return_json.data[i]))
-                    }
-                }
-                else{
-                    document.getElementById(id).appendChild(make_document(return_json.data))
-                }
-            }
-            else if(return_json.error == true){
-                print("Has Error!")
-            }
-            else {
-                print('알려지지 않은 오류!')
-            }
+            parsing(return_json, id)
         }
     }
 
