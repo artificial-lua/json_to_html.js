@@ -16,6 +16,7 @@ id : 반영할 html 태그의 id
 # rest(url, id)
 url : String, 해당 주소로 접속하여 json 형식의 string을 받아옴  
 id : 파싱된 json string을 해당 id값을 가진 html 태그 내부에 입력  
+실행 시 parsing() 함수 자동 실행
 
 # make_document(json)
 파싱된 html 태그를 return하는 재귀함수  
