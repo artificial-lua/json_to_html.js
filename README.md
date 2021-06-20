@@ -8,10 +8,14 @@ json형식의 string을 파싱하여 html 태그로 변환하고, 특정 id값�
 위 코드를 html 내 삽입하여 사용할 수 있음
 javascript 내에서 debug를 false로 하면 콘솔로 로그가 출력되지 않습니다.
 
+# parsing(string, id)
+string : json 형식의 string  
+id : 반영할 html 태그의 id  
+함수 실행 시, 해당 id값을 가진 태그 내부는 초기화된 후에 파싱을 진행함  
+
 # rest(url, id)
 url : String, 해당 주소로 접속하여 json 형식의 string을 받아옴  
 id : 파싱된 json string을 해당 id값을 가진 html 태그 내부에 입력  
-rest 함수 실행 시, 해당 id값을 가진 태그 내부는 초기화된 후에 파싱을 진행함  
 
 # make_document(json)
 파싱된 html 태그를 return하는 재귀함수  
