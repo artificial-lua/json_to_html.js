@@ -6,7 +6,9 @@ function print(a){
     }
 }
 
-function parsing(return_json, id){
+function parsing(string, id){
+    return_json = JSON.parse(string)
+    print(return_json)
     if(return_json.error == false){
         print("Not Error")
         document.getElementById(id).innerHTML = ""
@@ -38,10 +40,7 @@ function rest(url, id){
     xhr.onload = function () {
         // xhr 객체의 status 값을 검사한다.
         if (xhr.status === 200) {
-            print(xhr.responseText)
-            return_json = JSON.parse(xhr.responseText)
-            print(return_json)
-            parsing(return_json, id)
+            parsing(xhr.responseText, id)
         }
     }
 
