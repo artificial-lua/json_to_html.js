@@ -25,7 +25,7 @@ inner에 json이나 array가 올 수 있음. json일 경우 재귀 호출하며,
 # json string의 형식
 ```json
 {
-    "name" : "name",
+    "name" : "test",
     "error" : false,
     "data" : {
         "tag" : "ul",
@@ -35,14 +35,14 @@ inner에 json이나 array가 올 수 있음. json일 경우 재귀 호출하며,
             "inner" : {
                 "tag" : "a",
                 "href" : "https://google.com",
-                "inner" : "1"}
+                "inner" : "to google"}
         },
         {
             "tag" : "li",
             "inner" : {
                 "tag" : "a",
                 "href" : "javascript:;",
-                "inner" : "2"
+                "inner" : "no action"
             }
         },
         {
@@ -51,8 +51,8 @@ inner에 json이나 array가 올 수 있음. json일 경우 재귀 호출하며,
             "onclick" : " ",
             "inner" : {
                 "tag" : "a",
-                "href" : "javascript:rest(json, id);",
-                "inner" : "3"
+                "href" : "javascript:rest('test.json', 'main');",
+                "inner" : "rest() action"
             }
         },
         {
@@ -60,7 +60,7 @@ inner에 json이나 array가 올 수 있음. json일 경우 재귀 호출하며,
             "inner" : {
                 "tag" : "a",
                 "href" : "",
-                "inner" : "4"
+                "inner" : "no action 2"
             }
         }
         ]}
