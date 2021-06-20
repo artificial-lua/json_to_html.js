@@ -10,7 +10,7 @@ function parsing(string, id){
     return_json = JSON.parse(string)
     print("descript : " + return_json.descript)
     if(return_json.error == false){
-        print("Not Error")
+        print("is error : no")
         document.getElementById(id).innerHTML = ""
         if(Array.isArray(return_json.data)){
             for(var i = 0; i < Object.keys(return_json.data).length; i++)
@@ -23,10 +23,10 @@ function parsing(string, id){
         }
     }
     else if(return_json.error == true){
-        print("Has Error!")
+        print("is error : yes")
     }
     else {
-        print('알려지지 않은 오류!')
+        print('error : has no error field')
     }
 }
 
@@ -56,7 +56,7 @@ function make_document(json){
     for(var key in json)
     {
         if(key == "tag"){
-            print("tag is " + json[key])
+            print("tag : " + json[key])
         }
         else if(key == "inner"){
             print(typeof(json.inner))
