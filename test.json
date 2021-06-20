@@ -9,14 +9,14 @@
             "inner" : {
                 "tag" : "a",
                 "href" : "https://google.com",
-                "inner" : "1"}
+                "inner" : "to google"}
         },
         {
             "tag" : "li",
             "inner" : {
                 "tag" : "a",
                 "href" : "javascript:;",
-                "inner" : "2"
+                "inner" : "no action"
             }
         },
         {
@@ -25,8 +25,8 @@
             "onclick" : " ",
             "inner" : {
                 "tag" : "a",
-                "href" : "javascript:rest(json, id);",
-                "inner" : "3"
+                "href" : "javascript:rest('test.json', 'main');",
+                "inner" : "rest() action"
             }
         },
         {
@@ -34,7 +34,7 @@
             "inner" : {
                 "tag" : "a",
                 "href" : "",
-                "inner" : "4"
+                "inner" : "no action 2"
             }
         }
         ]}
