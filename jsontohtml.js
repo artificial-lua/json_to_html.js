@@ -20,7 +20,7 @@ function rest(url, id){
             return_json = JSON.parse(xhr.responseText)
             print(return_json)
             if(return_json.error == false){
-                print("None Error")
+                print("Not Error")
                 document.getElementById(id).innerHTML = ""
                 if(Array.isArray(return_json.data)){
                     for(var i = 0; i < Object.keys(return_json.data).length; i++)
@@ -58,21 +58,21 @@ function make_document(json){
         else if(key == "inner"){
             print(typeof(json.inner))
             if(json.inner == false){
-                print("비어있음")
+                print("inner : 비어있음")
             }
             else if (Array.isArray(json.inner)){
-                print("Array : " + Object.keys(json.inner).length)
+                print("inner : Array=" + Object.keys(json.inner).length)
                 for (var i = 0; i < Object.keys(json.inner).length; i++){
                     newTag.appendChild(make_document(json.inner[i]))
                 }
             }
             else if(typeof(json.inner) == "object"){
-                print("typeof data : " + typeof(json.inner))
+                print("inner : " + typeof(json.inner))
                 newTag.appendChild(make_document(json.inner))
             }
             else{
+                print("inner : " + json.inner)
                 newTag.innerHTML = json.inner
-                print(json.inner)
             }
         }
         else{
