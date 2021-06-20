@@ -1,0 +1,41 @@
+{
+    "name" : "test",
+    "error" : false,
+    "data" : {
+        "tag" : "ul",
+        "id" : "list",
+        "inner" : [{
+            "tag" : "li",
+            "inner" : {
+                "tag" : "a",
+                "href" : "https://google.com",
+                "inner" : "1"}
+        },
+        {
+            "tag" : "li",
+            "inner" : {
+                "tag" : "a",
+                "href" : "javascript:;",
+                "inner" : "2"
+            }
+        },
+        {
+            "tag" : "li",
+            "href" : " ",
+            "onclick" : " ",
+            "inner" : {
+                "tag" : "a",
+                "href" : "javascript:rest(json, id);",
+                "inner" : "3"
+            }
+        },
+        {
+            "tag" : "li",
+            "inner" : {
+                "tag" : "a",
+                "href" : "",
+                "inner" : "4"
+            }
+        }
+        ]}
+}
